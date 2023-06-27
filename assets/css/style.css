@@ -7,8 +7,308 @@
 */
 
 /*--------------------------------------------------------------
+
+
+
 # General
+
 --------------------------------------------------------------*/
+
+
+
+
+
+.pricingTable {
+  text-align: center;
+  background: #fff;
+  margin: 0 -15px;
+  box-shadow: 0 0 10px #ababab;
+  padding-bottom: 40px;
+  border-radius: 10px;
+  color: #cad0de;
+  transform: scale(1);
+  transition: all .5s ease 0s
+}
+
+.pricingTable:hover {
+  transform: scale(1.05);
+  z-index: 1
+}
+
+.pricingTable .pricingTable-header {
+  padding: 40px 0;
+  background: #f5f6f9;
+  border-radius: 10px 10px 50% 50%;
+  transition: all .5s ease 0s
+}
+
+.pricingTable:hover .pricingTable-header {
+  background: #ff9624
+}
+
+.pricingTable .pricingTable-header i {
+  font-size: 50px;
+  color: #858c9a;
+  margin-bottom: 10px;
+  transition: all .5s ease 0s
+}
+
+.pricingTable .price-value {
+  font-size: 20px;
+  color: #ff9624;
+  transition: all .5s ease 0s;
+  font-weight: 100
+}
+
+.pricingTable .month {
+  display: block;
+  font-size: 14px;
+  color: #cad0de
+}
+
+.pricingTable:hover .month,
+.pricingTable:hover .price-value,
+.pricingTable:hover .pricingTable-header i {
+  color: #fff
+}
+
+.pricingTable .heading {
+  font-size: 24px;
+  color: #ff9624;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 800
+}
+
+.pricingTable .pricing-content ul {
+  list-style: none;
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.pricingTable .pricing-content ul li {
+  line-height: 30px;
+  color: #a7a8aa
+}
+
+.pricingTable .pricingTable-signup a {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  padding: 5px 35px;
+  border-radius: 20px;
+  background: #ffa442;
+  text-transform: uppercase;
+  transition: all .3s ease 0s;
+  font-weight: 700;
+}
+
+.pricingTable .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #ffa442
+}
+
+.pricingTable.blue .heading,
+.pricingTable.blue .price-value {
+  color: #4b64ff
+}
+
+.pricingTable.blue .pricingTable-signup a,
+.pricingTable.blue:hover .pricingTable-header {
+  background: #4b64ff
+}
+
+.pricingTable.blue .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #4b64ff
+}
+
+.pricingTable.red .heading,
+.pricingTable.red .price-value {
+  color: #ff4b4b
+}
+
+.pricingTable.red .pricingTable-signup a,
+.pricingTable.red:hover .pricingTable-header {
+  background: #ff4b4b
+}
+
+.pricingTable.red .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #ff4b4b
+}
+
+.pricingTable.green .heading,
+.pricingTable.green .price-value {
+  color: #40c952
+}
+
+.pricingTable.green .pricingTable-signup a,
+.pricingTable.green:hover .pricingTable-header {
+  background: #40c952
+}
+
+.pricingTable.green .pricingTable-signup a:hover {
+  box-shadow: 0 0 10px #40c952
+}
+
+.pricingTable.blue:hover .price-value,
+.pricingTable.green:hover .price-value,
+.pricingTable.red:hover .price-value {
+  color: #fff
+}
+
+@media screen and (max-width:990px) {
+  .pricingTable {
+    margin: 0 0 20px
+  }
+}
+html{
+  scroll-behavior: smooth;
+}
+.totop{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #FFBF00;
+  padding: 20px;
+  border-radius: 20px;
+}
+#portfolio-flters{
+display: flex;
+margin: auto;
+padding: 10px 20px;
+background: rgb(255, 255, 255);
+border-radius: 100px;
+list-style: none;
+gap: 30px;
+color: rgb(0, 0, 0);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1025px) {
+  .float-contact {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 99999;
+      text-align: left;
+  }
+  .chat-face, .hotline, .zalo, .face {
+      overflow: hidden;
+      border: none !important;
+      background: none !important;
+  }   
+  .chat-face a, .hotline a, .zalo a, .face a {
+      display: block;
+      margin-bottom: 6px;
+  }
+  .chat-face a:hover, .hotline a:hover, .zalo a:hover, .face a:hover {
+      background: #fefefe;
+      color: #fff;
+      text-decoration: none;
+  }
+  .chat-face a img, .hotline a img, .zalo a img, .face a img {
+      display: block;
+      margin: auto;
+  }
+  .chat-face a, .hotline a, .zalo a, .face a {
+      color: #000;
+      text-align: center;
+      display: block;
+      font-size: 10px;
+  }   
+  }
+  
+  @media (max-width: 1024px) {
+  .float-contact {
+      position: fixed;
+      bottom: 0px;
+      z-index: 99999;
+      display: flex;
+      background: linear-gradient(#fff,#ecf0eb);
+      width: 100%;
+      height: 63px;
+  }
+  .face, .chat-face, .zalo, .hotline {
+      width: 25%;
+      text-align: center;
+      margin: auto;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #fff;
+  }
+  .face a img, .chat-face a img, .zalo a img, .hotline a img {
+      display: block;
+      margin: 5px auto 5px;
+  }
+  .face a, .chat-face a, .zalo a, .hotline a {
+      color: #fff;
+      font-size: 13px;
+  }
+  
+  }
+
+
+  .containercc{
+    display: inline-block;
+  }
+  .typed-outaa{
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: typing 6s steps(20, end) forwards, blinking .8s infinite;
+    font-size: 1.6rem;
+    width: 0;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blinking {
+    from { border-color: transparent }
+    to { border-color: orange; }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .product-grid{
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -360,7 +660,7 @@ h6 {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 60px;
 }
 
 .scrolled-offset {
@@ -650,7 +950,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 20px 0;
 }
 
 .section-bg {
